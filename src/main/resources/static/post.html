@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+
+    <style media="screen">
+        :root {
+            --color-optionHover: lightCoral;
+            --color-ButtonsBackground: lightBlue;
+            --color-ButtonsBorder: #B0C4DE;
+            --color-SectionBackground: grey;
+            --color-PostBackground: black;
+        }
+
+        #picture {
+            object-fit: cover;
+            margin: auto;
+            max-width: 100%;
+
+            border-radius: 25px;
+        }
+
+        #blurr {
+            display: flex;
+
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+        }
+
+        #picture-section {
+            min-height: 50px;
+            border-radius: 25px;
+            background-color: var(--color-ButtonsBackground);
+
+            display: flex;
+            padding: 0px !important;
+
+            /*  background-image:
+                url(https://cdn.discordapp.com/attachments/927964908849598495/929049923125669959/pc-gaming-800-euro.jpg);*/
+
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .interactions {
+            width: 100%;
+
+            display: flex;
+            margin: 10px;
+
+            z-index: 101;
+        }
+
+        .profile-picture {
+            height: 30px;
+            width: 30px;
+            border-radius: 50px;
+
+            margin-right: 5px;
+        }
+
+        .interact-icon {
+            height: 35px;
+            width: 35px;
+
+            margin: 0 5px;
+
+            border-radius: 50px;
+
+            background-color: var(--color-SectionBackground);
+            ;
+
+            text-align: center;
+            line-height: 35px;
+            font-size: 20px
+        }
+
+        .interact-profile {
+            height: 35px;
+            min-width: 60px;
+            max-width: 400px;
+
+            margin: 0 5px;
+            padding: 0 8px;
+
+            border-radius: 50px;
+
+            background-color: var(--color-SectionBackground);
+
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+        }
+
+        #content {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .section {
+            margin: 20px auto;
+
+            height: 100%;
+            width: 100%;
+
+            background-color: var(--color-SectionBackground);
+            border-radius: 15px;
+
+            padding: 5px;
+        }
+
+        .post-style {
+            border-radius: 25px;
+            background-color: var(--color-PostBackground);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #poll {
+            display: flex;
+
+            height: 100%;
+        }
+
+        .poll-option {
+            height: 100%;
+            width: 100%;
+
+            background-color: var(--color-ButtonsBackground);
+            border: solid 2px var(--color-ButtonsBorder);
+
+            display: table;
+        }
+
+        .poll-option:hover {
+            background-color: var(--color-optionHover);
+        }
+
+        #option-left {
+            border-radius: 15px 0 0 15px;
+
+            margin-right: 0;
+        }
+
+        #option-right {
+            border-radius: 0 15px 15px 0;
+
+            margin-left: 0;
+        }
+
+        .centered-text {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        #all-comments {
+            position: absolute;
+            z-index: 99;
+            top: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: var(--color-ButtonsBackground);
+            border-radius: 25px;
+        }
+
+        .undisplay-comment {
+            display: none !important;
+        }
+
+        .component-list {
+            list-style-type: none;
+            padding: 5px;
+            margin: 0;
+        }
+
+        .component-list li {
+            background-color: var(--color-ButtonsBackground);
+            border: solid 3px var(--color-ButtonsBorder);
+
+            border-radius: 15px;
+            padding: 5px;
+            height: 100%;
+            width: 100%;
+
+            margin-bottom: -25px;
+
+            transition-duration: 1000ms;
+            transition-property: margin;
+
+        }
+
+        .component-list li:last-child {
+            width: 50%;
+
+            margin-left: auto;
+            margin-right: 0;
+
+            margin-bottom: 0;
+        }
+
+        .component-list li:last-child:hover {
+            width: 50%;
+
+            margin-left: auto;
+            margin-right: 0;
+
+            margin-bottom: 0;
+        }
+
+        .component-list li:hover {
+            margin: 5px;
+        }
+
+        .component-list li a {
+            width: 100%;
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/41f83b0fb7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="pp">
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        /* vv standard post creation vv */
+        function createPostStructure(userName, userPicture, postTitle, postDescription) {
+            var post = ('<div id="post' + userName + '" class=" post-style container position-relative">' +
+                '<div class="row" style="min-height:400px">' +
+                '<div id="picture-section" class="col-12 col-md-5 position-relative">' +
+                '<div id="blurr">' +
+                '</div>' +
+                '<div class="interactions position-absolute top-0 start-0">' +
+                '<div id="like" class="interact-icon">' +
+                '<i id="like-icon" class="far fa-heart"></i>' +
+                '</div>' +
+                '<div id="comments" class="interact-icon">' +
+                '<i class="far fa-comment-dots"></i>' +
+                '</div>' +
+                '<div class="interact-profile">' +
+                '<image class="profile-picture" src = "' + userPicture + '"></image>' +
+                userName +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div id="content" class="col-12 col-md ">' +
+                '<div id="description-section" class="section">' +
+                '<h2 id="title"> ' + postTitle + ' </h2>' +
+                '<h5 id="description" > ' + postDescription + ' </h5>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div id="all-comments" class="row undisplay-comment">' +
+
+                '</div>');
+
+            return post;
+        }
+
+        function addLikeListener(post) {
+            const likeBtn = $('#' + post).find('#like');
+            const likeIcon = likeBtn.find('#like-icon');
+
+            likeBtn.click({ param1: likeIcon }, function () {
+
+                if (likeIcon.hasClass('fas')) {
+                    likeIcon.removeClass('fas');
+                    likeIcon.addClass('far');
+                } else {
+                    likeIcon.removeClass('far');
+                    likeIcon.addClass('fas');
+                }
+            });
+        }
+
+        function addCommentListener(post) {
+            const commentBtn = $('#' + post).find('#comments');
+            const allComments = $('#' + post).find('#all-comments');
+
+            commentBtn.click({ param1: allComments }, function () {
+
+                allComments.fadeToggle();
+                allComments.toggleClass('undisplay-comment');
+
+            });
+        }
+
+        /* ^^ standard post creation ^^ */
+
+
+        /* vv add parts to post vv */
+        function addPostPicture(post, img) {
+            const imagePlace = $('#' + post).find('#blurr');
+            const imageBackground = $('#' + post).find('#picture-section');
+
+            removePostPicture(post);
+
+            imageBackground.css({ "background-image": "URL('" + img + "')" });
+
+            imagePlace.append(
+                '<img id="picture" src="' + img + '">'
+            );
+
+        }
+
+
+
+        function addConfiguration(post, conf, confName, confLink) {
+            const cont = $('#' + post).find('#content');
+
+            removePostConfiguration(post);
+
+            var componentSection = (
+                '<div id="configuration-section" class="section">' +
+                '<h5>' + confName + '</h5>' +
+                '<ul class = "component-list" >'
+            );
+
+            for (var i = 0; i < 5; ++i)
+                componentSection = componentSection.concat('<li style="position: relative; z-index:' + i + '!important;">' + conf[i][0] + ': <a href="' + conf[i][1] + '">' + conf[i][1] + '</a></li>')
+
+            componentSection = componentSection.concat(
+                '<li style="position: relative; z-index: 6!important;"><a href="' + confLink + '"> Vedi la configurazione >></a></li>' +
+                '</ul>' +
+                '</div>'
+            );
+
+            cont.append(componentSection);
+        }
+
+        function addPoll(post, opz1, opz2) {
+            const cont = $('#' + post).find('#content');
+
+            removePool(post);
+
+            cont.append(
+                '<div id="poll-section" class="section">' +
+                '<div id="poll">' +
+                '<div id="option-left" class="poll-option h5">' +
+                '<span class="centered-text">' + opz1 + '</span>' +
+                '</div>' +
+                '<div id="option-right" class="poll-option h5">' +
+                '<span class="centered-text">' + opz2 + '</span>' +
+                '</div>' +
+                '</div>' +
+                '</div>');
+        }
+
+        /* ^^ add parts to post ^^ */
+
+        /* vv remove parts to post vv */
+
+        function removePool(post) {
+            const cont = $('#' + post).find('#content');
+            const poll = cont.find('#poll-section');
+
+            if (poll.length) {
+                poll.remove();
+            }
+        }
+
+        function removePostPicture(post) {
+            const imagePlace = $('#' + post).find('#blurr');
+            const imageBackground = $('#' + post).find('#picture-section');
+
+            imageBackground.css({ "background-image": "" });
+
+            if (imagePlace.children().length > 0) {
+                imagePlace.empty();
+            }
+
+        }
+
+        function removePostConfiguration(post) {
+            const cont = $('#' + post).find('#content');
+            const conf = cont.find('#configuration-section');
+
+            if (conf.length) {
+                conf.remove();
+            }
+        }
+
+        /* ^^ remove parts to post ^^ */
+
+        window.addEventListener("load", () => {
+
+
+            $('#pp').append(createPostStructure("userName", "https://cdn.discordapp.com/attachments/927964908849598495/929342399063316/download.jpg", "postTitle", "postDescription"));
+
+            addLikeListener('post' + "userName");
+
+            addCommentListener('post' + "userName");
+
+            addPostPicture('post' + "userName", "https://cdn.discordapp.com/attachments/927964908849598495/929049923125669959/pc-gaming-800-euro.jpg")
+            addPostPicture('post' + "userName", "https://pc-gaming.it/wp-content/uploads/2020/07/pc-gaming-500-550-euro-configurazione.jpg")
+
+            addPoll('post' + "userName", "opz1", "opz2");
+            addPoll('post' + "userName", "opz3", "opz4");
+
+
+            var conf = [];
+
+            conf.push(["formName.id", "#"]);
+            conf.push(["formName.id", "#"]);
+            conf.push(["formName.id", "#"]);
+            conf.push(["formName.id", "#"]);
+            conf.push(["formName.id", "#"]);
+
+            addConfiguration('post' + "userName", conf, "mario", "#");
+
+            //removePool('post'+"userName");
+            removePostPicture('post' + "userName");
+            //removePostConfiguration('post'+"userName");
+        });
+    </script>
+</body>
+
+</html>

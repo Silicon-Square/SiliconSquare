@@ -1,0 +1,60 @@
+<!-- Edit / Add -->
+<div class="modal fade" id="editComponent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p align="right">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;
+                    </button>
+                </p>
+
+                <h4 class="modal-title" id="myModalLabel">"
+                    <%=operationName%>
+
+                        <%=request.getAttribute(categoryDisplayName)%>"
+                </h4>
+
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div>
+                        <form id="data-form-component" method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <img class="img-responsive" alt="" />
+                                    <input type="file" id="component-image" name="component-image" accept="image/*"
+                                        class="form-control" onchange="showPreview(event)">
+                                </div>
+                            </div>
+                            <div style="height:10px;"></div>
+                            <div id="component-category-fields">
+
+                            </div>
+                            <div style="height:10px;"></div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="control-label" style="position:relative; top:7px;">Status: </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <select id="states" name="states" class="form-select" onchange="saveState(this);">
+                                    </select>
+                                    <label id="state-description" for="states"></label>
+                                    <input type="hidden" id="idState" name="idState" value="" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="cancel-component-btn" class="btn btn-danger"
+                                    data-bs-dismiss="modal"><span class="fas fa-times"></span> Cancel
+                                </button>
+                                <button type="button" onclick="addComponent(this);" class="btn btn-primary"><span
+                                        class="fas fa-save"></span>
+                                    Add
+                                </button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

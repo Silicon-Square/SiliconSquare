@@ -1,0 +1,188 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.css"
+      rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
+        integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+      integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<script src="../js/component-utility.js" type="text/javascript"></script>
+<link rel="stylesheet" href="../css/component-style.css"/>
+
+
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-lg-12">
+            <div class="show-results mt-5 ">
+                <div class="float-left">
+                    <h5 class="text-dark mb-0 pt-2">Risultati: 1-6 di 540</h5>
+                </div>
+                <div class="sort-button float-right ">
+                    <ul class="list-inline mb-0 pt-3 ">
+                        <li class="list-inline-item mr-3">
+                            <select class="nice-select">
+                                <option data-display="Sort By">Nothing</option>
+                                <option value="1">Web Developer</option>
+                                <option value="2">PHP Developer</option>
+                                <option value="3">Web Designer</option>
+                            </select>
+                        </li>
+
+                        <li class="list-inline-item">
+                            <select class="nice-select">
+                                <option data-display="Default">Nothing</option>
+                                <option value="1">Web Developer</option>
+                                <option value="2">PHP Developer</option>
+                                <option value="3">Web Designer</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- LEFT SIDEBAR -->
+        <div class="col-lg-3">
+            <div class="left-sidebar">
+                <div class="accordion" id="accordionExample">
+
+                    <!-- FILTER 1 -->
+                    <div class="card mt-4">
+                        <a data-toggle="collapse" href="#collapseOne" class="job-list" aria-expanded="true"
+                           aria-controls="collapseOne">
+                            <div class="card-header" id="headingOne">
+                                <h6 class="mb-0 text-dark f-18">Filter 1</h6>
+                            </div>
+                        </a>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                            <div class="card-body p-0">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input all-select" id="customCheckAll">
+                                    <label class="custom-control-label ml-1 text-muted f-15" for="customCheckAll">option
+                                        1</label>
+                                </div>
+
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input all-select" id="customCheck22">
+                                    <label class="custom-control-label ml-1 text-muted f-15" for="customCheck22">option
+                                        2</label>
+                                </div>
+
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input all-select" id="customCheck23">
+                                    <label class="custom-control-label ml-1 text-muted f-15" for="customCheck23">option
+                                        3</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FILTER 2 -->
+                    <div class="card mt-4">
+                        <a data-toggle="collapse" href="#collapsefour" class="job-list" aria-expanded="true"
+                           aria-controls="collapsefour">
+                            <div class="card-header" id="headingfour">
+                                <h6 class="mb-0 text-dark f-18">Filter 2</h6>
+                            </div>
+                        </a>
+                        <div id="collapsefour" class="collapse show" aria-labelledby="headingfour">
+                            <div class="card-body p-0">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio1" name="customRadio"
+                                           class="custom-control-input">
+                                    <label class="custom-control-label ml-1 text-muted f-15" for="customRadio1">option
+                                        1</label>
+                                </div>
+
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio2" name="customRadio"
+                                           class="custom-control-input">
+                                    <label class="custom-control-label ml-1 text-muted f-15" for="customRadio2">option
+                                        2</label>
+                                </div>
+
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio3" name="customRadio"
+                                           class="custom-control-input">
+                                    <label class="custom-control-label ml-1 text-muted f-15" for="customRadio3">option
+                                        3</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- collapse one end -->
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-9">
+
+            <div class="candidates-listing-item">
+
+                <!-- Begin Item -->
+                <div class="list-grid-item mt-4 p-2">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="candidates-img float-left mr-4">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""
+                                     class="img-fluid d-block rounded">
+                            </div>
+                            <div class="candidates-list-desc job-single-meta  pt-2">
+                                <h5 class="mb-2 f-19"><a href="#" class="text-dark">Component Item Title</a></h5>
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item">
+                                        <p class="text-muted f-15 mb-0"><i class="mdi mdi-currency-eur mr-1"></i>2000
+                                        </p>
+                                    </li>
+                                </ul>
+                                <p class="text-muted mt-1 mb-0">Attribute : HTML, CSS, JavaScript, Wordpress, PHP,
+                                    jQuery.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="candidates-list-fav-btn text-right">
+                                <div class="fav-icon">
+                                    <i class="mdi mdi-heart f-20"></i>
+                                </div>
+                                <div class="candidates-listing-btn mt-4">
+                                    <a href="#" class="btn btn-outline btn-sm">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END ITEM -->
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination job-pagination justify-content-center mt-5 mb-5">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                        <i class="mdi mdi-chevron-double-left f-15"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                                        <i class="mdi mdi-chevron-double-right f-15"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

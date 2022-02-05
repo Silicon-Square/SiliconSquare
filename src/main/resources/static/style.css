@@ -1,0 +1,285 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  margin: 0px !important;
+}
+
+.administrator-bar {
+  display: flex !important;
+  justify-content: space-between !important;
+  flex-direction: row !important;
+  margin: auto !important;
+}
+
+.my-button {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  width: 100% !important;
+  padding: 10px 15px;
+  margin: 10px;
+
+  text-align: center;
+  transition: background-color 1s !important;
+  cursor: pointer;
+}
+
+.my-button:active {
+  -moz-box-shadow: inset 0 0 5px #000000;
+  -webkit-box-shadow: inset 0 0 5px #000000;
+  box-shadow: inset 0 0 5px #000000;
+}
+
+.my-button:hover {
+  color: white !important;
+  background-color: #0d6efd;
+}
+
+.btn-danger {
+  background-color: #b22222 !important;
+  border-color: grey;
+}
+
+/* css header */
+.navbar {
+  margin: 5px;
+  border-radius: 15px;
+
+  background-color: #f8f8ff !important;
+
+  position: sticky !important;
+  top: 5px;
+  right: 0;
+  left: 0;
+  z-index: 999;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar-collapse {
+  margin-left: 20px !important;
+}
+
+.navbar-toggler i {
+  font-size: 25px;
+}
+
+.navbar a {
+  transition: box-shadow 500ms;
+  border-radius: 15px;
+
+  margin: 5px 0;
+}
+
+.navbar a:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar a:active {
+  -moz-box-shadow: inset 0 0 5px #000000;
+  -webkit-box-shadow: inset 0 0 5px #000000;
+  box-shadow: inset 0 0 5px #000000;
+}
+
+.navbar-brand {
+  padding: 5px;
+}
+
+.dropdown-toggle {
+  min-width: 60px !important;
+}
+
+.dropdown-menu {
+  border-radius: 20px !important;
+}
+
+.navbar .banned-avatar {
+  background-color: rgba(255, 0, 0, 0.4);
+  border-radius: 25px;
+  padding: 5px;
+}
+
+a.user-profile-dropdown .dropdown-item {
+  padding-right: 5px;
+}
+
+a.nav-link p {
+  display: flex;
+  padding: 3px;
+}
+
+a.nav-link p i {
+  margin-top: 4px;
+  margin-right: 4px;
+}
+
+a.nav-link {
+  padding: 0px;
+}
+
+/* css header */
+
+/* css account */
+
+/* css account */
+
+/* css footer */
+
+.footer .footer-social-icon a {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: grey;
+  color: #000;
+  border-radius: 50%;
+  margin-right: 8px;
+  font-size: 15px;
+}
+
+.footer .footer-social-icon a:hover {
+  background: #1baaa0;
+}
+
+.footer .footer-links {
+  margin: 0;
+  text-align: center;
+}
+
+.footer .footer-links li + li {
+  padding-top: 10px;
+}
+
+.footer .footer-links li a {
+  position: relative;
+}
+
+.footer .footer-links li a:after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  transition: ease all 0.35s;
+  background: dodgerblue;
+}
+
+.footer .footer-links li a:hover:after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.footer .footer-top {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer .footer-top h5,
+.footer .footer-top .h5 {
+  position: relative;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .footer .footer-top {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer .footer-top {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.footer .footer-border-top {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer .footer-border-top.dark {
+  border-top: 1px solid rgba(16, 16, 16, 0.1);
+}
+
+.footer .footer-border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer .footer-border-bottom.dark {
+  border-bottom: 1px solid rgba(16, 16, 16, 0.1);
+}
+
+.black-link a {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* css footer */
+
+/* css users */
+
+th.dt-center,
+td.dt-center,
+tr.dt-center {
+  align: center;
+}
+
+.table {
+  margin-top: 30px;
+}
+
+.table img {
+  height: 50px;
+
+  border-radius: 150px;
+}
+
+.role {
+  display: inline-block;
+  line-height: 30px;
+  color: #fff;
+  padding: 0 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.item {
+  display: block;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  border-radius: 100%;
+  background: dimgrey;
+  margin-right: 5px;
+}
+
+button,
+input[type="button"] {
+  border: none;
+  background: none;
+  cursor: pointer;
+  background: #e5e5e5;
+}
+
+.item i {
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* css users */

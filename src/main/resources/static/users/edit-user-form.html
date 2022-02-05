@@ -1,0 +1,122 @@
+<style>
+    #avatar-container {
+        width: 100%;
+
+        margin: 10px 0 !important;
+    }
+
+    #avatar-preview {
+        max-width: 80%;
+        margin: auto;
+        object-fit: cover;
+    }
+</style>
+<!-- Edit -->
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Edit UserUser</h4>
+                <p align="right">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;
+                    </button>
+                </p>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div>
+                        <form id="data-form-user" method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <div id="avatar-container">
+                                        <img id="avatar-preview" src="" class="avatar img-circle" alt="avatar">
+                                    </div>
+                                    <input type="file" id="avatar" name="avatar"
+                                        accept="image/png, image/jpg, image/jpeg, image/gif" class="form-control">
+                                </div>
+                            </div>
+                            <div style="height:10px;"></div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label style="position:relative; top:7px;">Name:</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" name="name" id="name" class="form-control" value="">
+                                </div>
+                            </div>
+                            <div style="height:10px;"></div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label style="position:relative; top:7px;">Surname:</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" name="surname" id="surname" class="form-control" value="">
+                                </div>
+                            </div>
+                            <div style="height:10px;"></div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="control-label" style="position:relative; top:7px;">Email:</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="email" name="email" value="">
+                                </div>
+                            </div>
+                            <div style="height:10px;"></div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="control-label" style="position:relative; top:7px;">Username:</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="username" name="username" value="">
+                                </div>
+                            </div>
+                            <div style="height:10px;"></div>
+                            <div class="row" id="roleRow">
+                                <div class="col-md-2">
+                                    <label class="control-label" style="position:relative; top:7px;">Role: </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <select id="roles" name="roles" class="form-select" onchange="saveRole(this);">
+                                    </select>
+                                    <input type="hidden" id="idRole" name="idRole" value="" />
+                                </div>
+                            </div>
+                        </form>
+                        <div style="height:10px;"></div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label class="control-label" style="position:relative; top:7px;"></label>
+                            </div>
+                            <div class="col-md-10">
+                                <!--<button id="passwordButton" type="button" class="btn btn-primary"
+                                    onclick="generatePassword();">
+                                    Generate New Password
+                                </button>-->
+                                <!-- <div class="col-md-11 my-button" onclick="generatePassword();">Generate New Password
+                                </div> -->
+                            </div>
+                        </div>
+                        <div style="height:10px;"></div>
+
+                        <div class="modal-footer">
+                            <!--<button type="button" id="cancel-user-btn" class="btn btn-danger"
+                                data-bs-dismiss="modal"><span class="fas fa-times"></span> Cancel
+                            </button>
+                            <button type="button" onclick="editUser(this);" class="btn btn-primary"><span
+                                    class="fas fa-save"></span>
+                                Update
+                            </button>-->
+                            <div class="my-button" id="cancel-user-btn" data-bs-dismiss="modal"><span
+                                    class="fas fa-times"></span> Cancel
+                            </div>
+                            <div class="my-button" onclick="editUser(this);"><span class=" fas fa-save"></span> Update
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.modal -->

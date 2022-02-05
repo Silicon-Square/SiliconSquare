@@ -1,0 +1,73 @@
+<style>
+    .picture-container {
+        width: 100%;
+
+        margin: 10px 0 !important;
+        display: flex;
+    }
+
+    .picture-preview {
+        max-width: 80% !important;
+        margin: auto;
+        object-fit: cover;
+    }
+</style>
+
+<!-- Edit -->
+<div class="modal fade" id="single-dialog-component" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="titleComponent">Add New Component</h4>
+                <p align="right">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;
+                    </button>
+                </p>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div>
+                        <div id="single-component-image-container" class="picture-container">
+                            <img id="single-component-image-preview" src="" class="picture-preview"
+                                alt="Component Image">
+                        </div>
+                        <form id="data-form-component" method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <input type="file" id="component-image" name="component-image" accept="image/*"
+                                        class="form-control" onchange="showPreview(event)">
+                                </div>
+                            </div>
+                            <div style="height:10px;"></div>
+                            <div id="component-category-fields">
+
+                            </div>
+                            <div style="height:10px;"></div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="control-label" style="position:relative; top:7px;">Status: </label>
+                                </div>
+                                <div class="col-md-10">
+                                    <select id="states" name="states" class="form-select" onchange="saveState(this);">
+                                    </select>
+                                    <label id="state-description" for="states"></label>
+                                    <input type="hidden" id="idState" name="idState" value="" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="cancel-component-btn" class="btn btn-danger"
+                                    data-bs-dismiss="modal"><span class="fas fa-trash-alt"></span> Cancel
+                                </button>
+                                <button id="submit-button" type="button" onclick="addComponent(this);"
+                                    class="btn btn-primary"><span class="fas fa-save"></span>
+                                    Add
+                                </button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.modal -->
